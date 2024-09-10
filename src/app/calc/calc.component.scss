@@ -1,0 +1,84 @@
+/* Estilos do Container da Calculadora */
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px); /* Altura total da viewport menos a altura do rodapé */
+  background: #e0f7fa; /* Fundo leve e refrescante */
+}
+
+/* Estilos da Calculadora */
+.calculator {
+  width: 300px; /* Largura ajustada para um design mais espaçoso */
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff; /* Fundo branco para um look clean */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+  .display {
+    font-size: 2em; /* Tamanho de fonte ajustado para o display */
+    color: #333;
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: right;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr); /* Quatro linhas para os botões */
+    grid-template-columns: repeat(4, 1fr); /* Quatro colunas para os botões */
+    gap: 20px; /* Espaço entre os botões */
+    padding: 10px;
+    height: calc(100% - 70px); /* Ajusta a altura dos botões para preencher o espaço restante */
+  }
+
+  .button {
+    font-size: 1.5em; /* Tamanho da fonte dos botões */
+    padding: 15px; /* Ajuste o padding para um tamanho mais compacto */
+    border: none;
+    border-radius: 8px;
+    background-color: #e0e0e0; /* Cor neutra para os botões */
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .button:hover {
+    background-color: #bdbdbd; /* Cor de fundo quando o botão é hover */
+  }
+
+  .button:active {
+    transform: scale(0.95); /* Efeito de clique nos botões */
+  }
+
+  .button.operator {
+    background-color: #ffab91; /* Cor suave para operadores */
+  }
+
+  .button.operator:hover {
+    background-color: #ff8a65; /* Cor de hover mais escura */
+  }
+
+  .button.equal {
+    background-color: #4db6ac; /* Cor suave para o botão igual */
+    grid-column: span 3; /* O botão '=' ocupa três linhas */
+  }
+
+  .button.equal:hover {
+    background-color: #26a69a; /* Cor de hover mais escura */
+  }
+
+  .button.clear {
+    background-color: #ff8a80; /* Cor suave para o botão limpar */
+  }
+
+  .button.clear:hover {
+    background-color: #ff5252; /* Cor de hover mais escura */
+  }
+
+  .button.zero {
+    grid-column: span 3; /* O botão '0' ocupa duas colunas */
+  }
+}
